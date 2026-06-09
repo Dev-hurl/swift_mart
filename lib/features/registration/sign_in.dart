@@ -44,7 +44,6 @@ class _SignInState extends State<SignIn> {
                 children: [
                   SizedBox(
                     width: double.infinity,
-
                     child: Column(
                       children: [
                         Column(
@@ -79,6 +78,100 @@ class _SignInState extends State<SignIn> {
                               obscureText: true,
                               controller: _passwordController,
                               hinText: 'e.g. Enter your Password',
+                            ),
+                            SizedBox(height: 24),
+                            Row(
+                              spacing: 4,
+                              children: [
+                                Icon(
+                                  Icons.check_box_outline_blank_rounded,
+                                  color: AppColors.blue,
+                                ),
+                                Text(
+                                  'Remember me',
+                                  style: TextStyle(
+                                    fontSize: AppFonts.caption,
+                                    fontWeight: AppFonts.medium,
+                                    color: AppColors.blue,
+                                  ),
+                                ),
+                                Spacer(),
+                                Text(
+                                  'Forgot Password?',
+                                  style: TextStyle(
+                                    fontSize: AppFonts.caption,
+                                    fontWeight: AppFonts.medium,
+                                    color: AppColors.error,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 32),
+                            SizedBox(
+                              height: 48,
+                              width: double.infinity,
+                              child: FilledButton(
+                                style: FilledButton.styleFrom(
+                                  backgroundColor: AppColors.blue,
+                                ),
+                                onPressed: () {
+                                  //
+                                },
+                                child: Text(
+                                  'Log In',
+                                  style: TextStyle(
+                                    fontSize: AppFonts.body,
+                                    fontWeight: AppFonts.semibold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 12),
+                            SizedBox(
+                              height: 48,
+                              width: double.infinity,
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                  foregroundColor: AppColors.blue,
+                                ),
+                                onPressed: () {
+                                  //
+                                },
+                                child: Text(
+                                  'Continue as Guest',
+                                  style: TextStyle(
+                                    fontSize: AppFonts.body,
+                                    fontWeight: AppFonts.semibold,
+                                    color: AppColors.blue,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: 24),
+                            Text('OR'),
+                            SizedBox(height: 12),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                IconButton(
+                                  onPressed: () {
+                                    //
+                                  },
+                                  icon: Icon(Icons.facebook_rounded),
+                                ),
+                                IconButton(
+                                  onPressed: () {
+                                    //
+                                  },
+                                  icon: Icon(Icons.facebook_rounded),
+                                ),
+                                IconButton(
+                                  onPressed: () {
+                                    //
+                                  },
+                                  icon: Icon(Icons.facebook_rounded),
+                                ),
+                              ],
                             ),
                           ],
                         ),
