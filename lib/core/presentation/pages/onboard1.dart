@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
-import 'package:swift_mart/core/constants/app_sizes.dart';
 import 'package:swift_mart/core/presentation/pages/onboard2.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
 
 class Onboard1 extends StatelessWidget {
-  Onboard1({super.key});
 
   final List<String> images = [
-    'assets/images/friuts.jpg', // Item 0: Left Track - Tall
-    'assets/images/smoothie.jpg', // Item 1: Left Track - Short
-    'assets/images/food.jpg', // Item 2: Right Track - Short
-    'assets/images/blender.png', // Item 3: Right Track - Tall
+    'assets/images/friuts.jpg',
+    'assets/images/smoothie.jpg',
+    'assets/images/food.jpg',
+    'assets/images/blender.png',
   ];
 
+  Onboard1({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +56,7 @@ class Onboard1 extends StatelessWidget {
                                 flex: 2, // Tall item
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(
-                                    AppSizes.bRLarge1,
+                                    12,
                                   ),
                                   child: Image.asset(
                                     images[0],
@@ -69,7 +68,7 @@ class Onboard1 extends StatelessWidget {
                                 flex: 1, // Short item
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(
-                                    AppSizes.bRLarge1,
+                                    12,
                                   ),
                                   child: Image.asset(
                                     images[1],
@@ -91,7 +90,7 @@ class Onboard1 extends StatelessWidget {
                                 flex: 1, // Short item
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(
-                                    AppSizes.bRLarge1,
+                                    12,
                                   ),
                                   child: Image.asset(
                                     images[2],
@@ -103,7 +102,7 @@ class Onboard1 extends StatelessWidget {
                                 flex: 2, // Tall item
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(
-                                    AppSizes.bRLarge1,
+                                    12,
                                   ),
                                   child: Image.asset(
                                     images[3],
