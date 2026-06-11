@@ -4,8 +4,8 @@ import 'package:swift_mart/core/theme/app_colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String hinText;
-  final IconData? prefixIcon;
-  final IconData? suffixIcon;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
   final bool obscureText;
   final TextEditingController controller;
   final TextInputType keyboardType;
@@ -28,9 +28,9 @@ class CustomTextFormField extends StatelessWidget {
       obscureText: obscureText,
 
       decoration: InputDecoration(
-        prefixIcon: Icon(prefixIcon),
+        prefixIcon: prefixIcon,
         prefixIconColor: AppColors.blue,
-        suffixIcon: Icon(suffixIcon),
+        suffixIcon: suffixIcon,
         suffixIconColor: AppColors.blue,
         hintText: hinText,
         hintStyle: TextStyle(

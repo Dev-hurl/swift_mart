@@ -77,15 +77,15 @@ class _SignInState extends State<SignIn> {
                               SizedBox(height: 40),
                               //Email textFF
                               CustomTextFormField(
-                                prefixIcon: Icons.email_rounded,
+                                prefixIcon: Icon(Icons.email_rounded),
                                 controller: _emailController,
                                 hinText: 'e.g. Johndoe@gmailcom',
                               ),
                               SizedBox(height: 12),
                               //Password TextFF
                               CustomTextFormField(
-                                prefixIcon: Icons.password_rounded,
-                                suffixIcon: Icons.visibility_off_rounded,
+                                prefixIcon: Icon(Icons.password_rounded),
+                                suffixIcon: Icon(Icons.visibility_off_rounded),
                                 obscureText: true,
                                 controller: _passwordController,
                                 hinText: 'e.g. Enter your Password',
