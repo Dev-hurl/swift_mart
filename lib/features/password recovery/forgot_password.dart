@@ -1,19 +1,17 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
 import 'package:swift_mart/core/presentation/widgets/custom_text_form_field.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
-import 'package:swift_mart/features/registration/verification/verification_screen.dart';
-import 'package:swift_mart/features/registration/verification/verify_phone.dart';
+import 'package:swift_mart/features/password%20recovery/forgot_password_verify.dart';
 
-class VerifyEmail extends StatefulWidget {
-  const VerifyEmail({super.key});
+class ForgotPassword extends StatefulWidget {
+  const ForgotPassword({super.key});
 
   @override
-  State<VerifyEmail> createState() => _VerifyEmailState();
+  State<ForgotPassword> createState() => _ForgotPasswrodState();
 }
 
-class _VerifyEmailState extends State<VerifyEmail> {
+class _ForgotPasswrodState extends State<ForgotPassword> {
   final TextEditingController _emailController = TextEditingController();
 
   @override
@@ -36,19 +34,19 @@ class _VerifyEmailState extends State<VerifyEmail> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          spacing: 4,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Confirm Email Address',
+              'Forgot Password?',
               style: TextStyle(
                 fontSize: AppFonts.heading2,
                 fontWeight: AppFonts.bold,
                 color: AppColors.blue,
               ),
             ),
+            SizedBox(height: 4),
             Text(
-              'Please enter your email address to receive a confirmation to proceed.',
+              'Please verify your email to receive a confirmation to set a new password',
               style: TextStyle(
                 fontSize: AppFonts.caption,
                 fontWeight: AppFonts.medium,
@@ -85,44 +83,11 @@ class _VerifyEmailState extends State<VerifyEmail> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => VerificationScreen(),
+                      builder: (context) => ForgotPasswordVerify(),
                     ),
                   );
                 },
-                child: Text('Verify Email'),
-              ),
-            ),
-            Spacer(),
-            Align(
-              alignment: Alignment.center,
-              child: Text.rich(
-                TextSpan(
-                  text: 'Verify with',
-                  style: TextStyle(
-                    fontSize: AppFonts.caption,
-                    fontWeight: AppFonts.semibold,
-                    color: AppColors.textSecondary,
-                  ),
-                  children: [
-                    TextSpan(
-                      text: ' Phone number.',
-                      style: TextStyle(
-                        fontSize: AppFonts.caption,
-                        fontWeight: AppFonts.semibold,
-                        color: AppColors.blue,
-                      ),
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => VerifyPhone(),
-                            ),
-                          );
-                        },
-                    ),
-                  ],
-                ),
+                child: Text('Send Code'),
               ),
             ),
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swift_mart/features/password%20recovery/forgot_password.dart';
 import 'package:swift_mart/features/registration/verification/verification_screen.dart';
 import 'package:swift_mart/features/registration/verification/verify_phone.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: VerifyPhone(),
+      home: ForgotPassword(),
     );
   }
 }

@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
+import 'package:swift_mart/features/password%20recovery/reset_password.dart';
 
-class VerificationScreen extends StatefulWidget {
-  const VerificationScreen({super.key});
+class ForgotPasswordVerify extends StatefulWidget {
+  const ForgotPasswordVerify({super.key});
 
   @override
-  State<VerificationScreen> createState() => _VerificationScreenState();
+  State<ForgotPasswordVerify> createState() => _ForgotPasswordVerifyState();
 }
 
-class _VerificationScreenState extends State<VerificationScreen> {
+class _ForgotPasswordVerifyState extends State<ForgotPasswordVerify> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,17 +33,18 @@ class _VerificationScreenState extends State<VerificationScreen> {
         padding: EdgeInsetsGeometry.all(16),
         child: Center(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             spacing: 4,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Confirm Verification Code',
+                'Confirm Reset Code',
                 style: TextStyle(
                   fontSize: AppFonts.heading2,
                   fontWeight: AppFonts.bold,
                   color: AppColors.blue,
                 ),
               ),
+
               Text(
                 'Please enter the confirmation code sent to email or phone to proceed.',
                 //text span here & be able to change to which ever verification method was chosen
@@ -72,7 +74,10 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     backgroundColor: AppColors.blue,
                   ),
                   onPressed: () {
-                    //
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ResetPassword()),
+                    );
                   },
                   child: Text(
                     'Verify Code',

@@ -2,8 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
-import 'package:swift_mart/core/presentation/widgets/custom_text_form_field.dart';
+import 'package:swift_mart/core/presentation/widgets/custom_alert_dialog.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
+import 'package:swift_mart/features/registration/verification/verification_screen.dart';
 import 'package:swift_mart/features/registration/verification/verify_email.dart';
 
 class VerifyPhone extends StatefulWidget {
@@ -25,6 +26,28 @@ class _VerifyPhoneState extends State<VerifyPhone> {
     _mainFocus.dispose();
     super.dispose();
   }
+  void _showVerificationSuccessModal(BuildContext context) {
+  showDialog(
+    context: context,
+    barrierDismissible: false,
+    builder: (BuildContext context) {
+      return CustomAlertDialog(
+        icon: Icon(
+          Icons.check_circle_rounded,
+          color: AppColors.success,
+          size: 40,
+        ),
+        title: 'Phone Verified Successfully',
+        description: 'Your account configuration is complete. You can now proceed to explore Swift Mart.',
+        confirmLabel: 'Go to Homepage',
+        onConfirm: () {
+          Navigator.pop(context);
+          // when confirm button succeeds
+        },
+      );
+    },
+  );
+}
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +59,9 @@ class _VerifyPhoneState extends State<VerifyPhone> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
+          spacing: 4,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -48,7 +72,6 @@ class _VerifyPhoneState extends State<VerifyPhone> {
                 color: AppColors.blue,
               ),
             ),
-            const SizedBox(height: 4),
             Text(
               'Please enter your phone number to receive a confirmation to proceed.',
               style: TextStyle(
@@ -87,11 +110,10 @@ class _VerifyPhoneState extends State<VerifyPhone> {
                     children: [
                       SizedBox(
                         width: 45,
-                      
                         child: TextField(
                           controller: _countryCodeController,
                           keyboardType: TextInputType.phone,
-                          
+
                           style: TextStyle(
                             fontSize: AppFonts.caption,
                             fontWeight: AppFonts.medium,
@@ -100,9 +122,8 @@ class _VerifyPhoneState extends State<VerifyPhone> {
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             isDense: true,
-                          
                           ),
-                        
+
                           inputFormatters: [
                             LengthLimitingTextInputFormatter(4),
                           ],
@@ -112,23 +133,17 @@ class _VerifyPhoneState extends State<VerifyPhone> {
                         height: 20,
                         width: 1.5,
                         color: AppColors.bgGrayLight,
-                      
                       ),
                     ],
                   ),
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(
-                    color: AppColors.textTertiary,
-                    
-                  ),
+                  borderSide: BorderSide(color: AppColors.textTertiary),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(
-                    color: AppColors.blue,
-                  ),
+                  borderSide: BorderSide(color: AppColors.blue),
                 ),
               ),
             ),
@@ -137,11 +152,14 @@ class _VerifyPhoneState extends State<VerifyPhone> {
               width: double.infinity,
               height: 48,
               child: FilledButton(
-                style: FilledButton.styleFrom(
-                  backgroundColor: AppColors.blue,
-                ),
+                style: FilledButton.styleFrom(backgroundColor: AppColors.blue),
                 onPressed: () {
-                  //
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => VerificationScreen(),
+                    ),
+                  );
                 },
                 child: Text('Verify Email'),
               ),
@@ -169,7 +187,9 @@ class _VerifyPhoneState extends State<VerifyPhone> {
                         ..onTap = () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => VerifyEmail()),
+                            MaterialPageRoute(
+                              builder: (context) => VerifyEmail(),
+                            ),
                           );
                         },
                     ),
