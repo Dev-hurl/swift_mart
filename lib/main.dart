@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:swift_mart/features/password%20recovery/forgot_password.dart';
-import 'package:swift_mart/features/registration/verification/verification_screen.dart';
-import 'package:swift_mart/features/registration/verification/verify_phone.dart';
 
 void main() {
   runApp(const MyApp());
