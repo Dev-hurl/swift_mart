@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
 import 'package:swift_mart/core/presentation/widgets/custom_text_form_field.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -25,14 +26,7 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: BackButton(
-          color: AppColors.textPrimary,
-          onPressed: () {
-            //
-          },
-        ),
-      ),
+      
       body: Padding(
         padding: const EdgeInsets.all(32.0),
         child: Form(
@@ -77,15 +71,31 @@ class _SignInState extends State<SignIn> {
                               SizedBox(height: 40),
                               //Email textFF
                               CustomTextFormField(
-                                prefixIcon: Icon(Icons.email_rounded),
+                                prefixIcon: UnconstrainedBox(
+                                  child: HugeIcon(
+                                    icon: HugeIcons.strokeRoundedMail02,
+                                    size: 24,
+                                    color: AppColors.blue,
+                                  ),
+                                ),
                                 controller: _emailController,
                                 hinText: 'e.g. Johndoe@gmailcom',
                               ),
                               SizedBox(height: 12),
                               //Password TextFF
                               CustomTextFormField(
-                                prefixIcon: Icon(Icons.password_rounded),
-                                suffixIcon: Icon(Icons.visibility_off_rounded),
+                                prefixIcon: UnconstrainedBox(
+                                  child: HugeIcon(
+                                    icon: HugeIcons.strokeRoundedLockPassword,
+                                    size: 24,
+                                  ),
+                                ),
+                                suffixIcon: UnconstrainedBox(
+                                  child: HugeIcon(
+                                    icon: HugeIcons.strokeRoundedView,
+                                    size: 24,
+                                  ),
+                                ),
                                 obscureText: true,
                                 controller: _passwordController,
                                 hinText: 'e.g. Enter your Password',
@@ -94,9 +104,11 @@ class _SignInState extends State<SignIn> {
                               Row(
                                 spacing: 4,
                                 children: [
-                                  Icon(
-                                    Icons.check_box_outline_blank_rounded,
+                                  HugeIcon(
+                                    icon: HugeIcons
+                                        .strokeRoundedCheckmarkSquare02,
                                     color: AppColors.blue,
+                                    size: 24,
                                   ),
                                   Text(
                                     'Remember me',
@@ -144,6 +156,10 @@ class _SignInState extends State<SignIn> {
                                 child: OutlinedButton(
                                   style: OutlinedButton.styleFrom(
                                     foregroundColor: AppColors.blue,
+                                    side: BorderSide(
+                                      color: AppColors.blue,
+                                      width: 2,
+                                    ),
                                   ),
                                   onPressed: () {
                                     //
@@ -182,7 +198,10 @@ class _SignInState extends State<SignIn> {
                                       onPressed: () {
                                         //
                                       },
-                                      icon: Icon(Icons.facebook_rounded, color: AppColors.blue,),
+                                      icon: Icon(
+                                        Icons.facebook_rounded,
+                                        color: AppColors.blue,
+                                      ),
                                     ),
                                   ),
                                   Container(
@@ -202,7 +221,10 @@ class _SignInState extends State<SignIn> {
                                       onPressed: () {
                                         //
                                       },
-                                      icon: Icon(Icons.facebook_rounded, color: AppColors.blue,),
+                                      icon: Icon(
+                                        Icons.facebook_rounded,
+                                        color: AppColors.blue,
+                                      ),
                                     ),
                                   ),
                                   Container(
@@ -222,7 +244,10 @@ class _SignInState extends State<SignIn> {
                                       onPressed: () {
                                         //
                                       },
-                                      icon: Icon(Icons.facebook_rounded, color: AppColors.blue),
+                                      icon: Icon(
+                                        Icons.facebook_rounded,
+                                        color: AppColors.blue,
+                                      ),
                                     ),
                                   ),
                                 ],

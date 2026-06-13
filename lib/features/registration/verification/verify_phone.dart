@@ -34,7 +34,7 @@ class _VerifyPhoneState extends State<VerifyPhone> {
       return CustomAlertDialog(
         icon: Icon(
           Icons.check_circle_rounded,
-          color: AppColors.success,
+          color: AppColors.blue,
           size: 40,
         ),
         title: 'Phone Verified Successfully',

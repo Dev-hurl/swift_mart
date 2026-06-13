@@ -26,7 +26,7 @@ class CustomTextFormField extends StatelessWidget {
       controller: controller,
       scrollPhysics: NeverScrollableScrollPhysics(),
       obscureText: obscureText,
-
+    
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         prefixIconColor: AppColors.blue,
@@ -42,7 +42,7 @@ class CustomTextFormField extends StatelessWidget {
         fillColor: AppColors.bgGray,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.textTertiary),
+          borderSide: BorderSide(color: AppColors.bgGray),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
