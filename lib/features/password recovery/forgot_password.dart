@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
 import 'package:swift_mart/core/presentation/widgets/custom_text_form_field.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
@@ -23,14 +24,6 @@ class _ForgotPasswrodState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: BackButton(
-          color: AppColors.textPrimary,
-          onPressed: () {
-            //
-          },
-        ),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -62,14 +55,16 @@ class _ForgotPasswrodState extends State<ForgotPassword> {
                   'Email Address',
                   style: TextStyle(
                     fontSize: AppFonts.body,
-                    fontWeight: AppFonts.semibold,
+                    fontWeight: AppFonts.medium,
                     color: AppColors.textSecondary,
                   ),
                 ),
                 CustomTextFormField(
                   controller: _emailController,
                   hinText: 'e.g. Johndoe@gmail.com',
-                  prefixIcon: Icon(Icons.email_rounded),
+                  prefixIcon: UnconstrainedBox(
+                    child: HugeIcon(icon: HugeIcons.strokeRoundedMail02),
+                  ),
                 ),
               ],
             ),

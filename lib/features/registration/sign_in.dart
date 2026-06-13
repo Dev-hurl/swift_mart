@@ -63,7 +63,7 @@ class _SignInState extends State<SignIn> {
                               Text(
                                 'Sign In to continue',
                                 style: TextStyle(
-                                  fontSize: AppFonts.body,
+                                  fontSize: AppFonts.caption,
                                   fontWeight: AppFonts.regular,
                                   color: AppColors.blue,
                                 ),
@@ -92,7 +92,7 @@ class _SignInState extends State<SignIn> {
                                 ),
                                 suffixIcon: UnconstrainedBox(
                                   child: HugeIcon(
-                                    icon: HugeIcons.strokeRoundedView,
+                                    icon: HugeIcons.strokeRoundedViewOff,
                                     size: 24,
                                   ),
                                 ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swift_mart/features/password%20recovery/forgot_password.dart';
-import 'package:swift_mart/features/registration/sign_in.dart';
+import 'package:swift_mart/features/password%20recovery/reset_password.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignIn(),
+      home: ResetPassword(),
     );
   }
 }

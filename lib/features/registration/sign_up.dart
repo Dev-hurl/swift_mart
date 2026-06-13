@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
 import 'package:swift_mart/core/presentation/widgets/custom_text_form_field.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -26,14 +27,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: BackButton(
-          color: AppColors.textPrimary,
-          onPressed: () {
-            //
-          },
-        ),
-      ),
+      
       body: Padding(
         padding: const EdgeInsets.all(32.0),
         child: Form(
@@ -60,7 +54,7 @@ class _SignUpState extends State<SignUp> {
                           Column(
                             children: [
                               Text(
-                                'Welcome Back!',
+                                'Create New Account',
                                 style: TextStyle(
                                   fontSize: AppFonts.heading2,
                                   fontWeight: AppFonts.bold,
@@ -68,9 +62,9 @@ class _SignUpState extends State<SignUp> {
                                 ),
                               ),
                               Text(
-                                'Sign Up to continue',
+                                'Sign Up to create new acccunt',
                                 style: TextStyle(
-                                  fontSize: AppFonts.body,
+                                  fontSize: AppFonts.caption,
                                   fontWeight: AppFonts.regular,
                                   color: AppColors.blue,
                                 ),
@@ -78,7 +72,9 @@ class _SignUpState extends State<SignUp> {
                               SizedBox(height: 40),
                               //Email textFF
                               CustomTextFormField(
-                                prefixIcon: Icon(Icons.email_rounded),
+                                prefixIcon: UnconstrainedBox(
+                                  child: HugeIcon(icon: HugeIcons.strokeRoundedMail02),
+                                ),
                                 controller: _emailController,
                                 hinText: 'e.g. Johndoe@gmailcom',
                               ),
@@ -145,6 +141,10 @@ class _SignUpState extends State<SignUp> {
                                 child: OutlinedButton(
                                   style: OutlinedButton.styleFrom(
                                     foregroundColor: AppColors.blue,
+                                    side: BorderSide(
+                                      color: AppColors.blue,
+                                      width: 2,
+                                    )
                                   ),
                                   onPressed: () {
                                     //
