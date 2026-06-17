@@ -12,13 +12,12 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
-  void dispose(){
+  void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
@@ -27,7 +26,6 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Padding(
         padding: const EdgeInsets.all(32.0),
         child: Form(
@@ -73,7 +71,9 @@ class _SignUpState extends State<SignUp> {
                               //Email textFF
                               CustomTextFormField(
                                 prefixIcon: UnconstrainedBox(
-                                  child: HugeIcon(icon: HugeIcons.strokeRoundedMail02),
+                                  child: HugeIcon(
+                                    icon: HugeIcons.strokeRoundedMail02,
+                                  ),
                                 ),
                                 controller: _emailController,
                                 hinText: 'e.g. Johndoe@gmailcom',
@@ -144,7 +144,7 @@ class _SignUpState extends State<SignUp> {
                                     side: BorderSide(
                                       color: AppColors.blue,
                                       width: 2,
-                                    )
+                                    ),
                                   ),
                                   onPressed: () {
                                     //
@@ -183,7 +183,10 @@ class _SignUpState extends State<SignUp> {
                                       onPressed: () {
                                         //
                                       },
-                                      icon: Icon(Icons.facebook_rounded, color: AppColors.blue,),
+                                      icon: Icon(
+                                        Icons.facebook_rounded,
+                                        color: AppColors.blue,
+                                      ),
                                     ),
                                   ),
                                   Container(
@@ -203,7 +206,10 @@ class _SignUpState extends State<SignUp> {
                                       onPressed: () {
                                         //
                                       },
-                                      icon: Icon(Icons.facebook_rounded, color: AppColors.blue,),
+                                      icon: Icon(
+                                        Icons.facebook_rounded,
+                                        color: AppColors.blue,
+                                      ),
                                     ),
                                   ),
                                   Container(
@@ -223,7 +229,10 @@ class _SignUpState extends State<SignUp> {
                                       onPressed: () {
                                         //
                                       },
-                                      icon: Icon(Icons.facebook_rounded, color: AppColors.blue),
+                                      icon: Icon(
+                                        Icons.facebook_rounded,
+                                        color: AppColors.blue,
+                                      ),
                                     ),
                                   ),
                                 ],

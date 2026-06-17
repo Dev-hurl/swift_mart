@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hugeicons/hugeicons.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
 import 'package:swift_mart/features/password%20recovery/reset_password.dart';
@@ -21,11 +22,10 @@ class _ForgotPasswordVerifyState extends State<ForgotPasswordVerify> {
           width: 48,
           height: 48,
           color: AppColors.bgGray,
-          child: BackButton(
+          child: HugeIcon(
+            icon: HugeIcons.strokeRoundedArrowLeft01,
+            size: 24,
             color: AppColors.textPrimary,
-            onPressed: () {
-              //
-            },
           ),
         ),
       ),

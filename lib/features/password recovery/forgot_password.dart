@@ -63,7 +63,11 @@ class _ForgotPasswrodState extends State<ForgotPassword> {
                   controller: _emailController,
                   hinText: 'e.g. Johndoe@gmail.com',
                   prefixIcon: UnconstrainedBox(
-                    child: HugeIcon(icon: HugeIcons.strokeRoundedMail02),
+                    child: HugeIcon(
+                      icon: HugeIcons.strokeRoundedMail02,
+                      size: 24,
+                      color: AppColors.blue,
+                    ),
                   ),
                 ),
               ],

@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
+// ignore: unused_import
 import 'package:swift_mart/core/presentation/widgets/custom_alert_dialog.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
 import 'package:swift_mart/features/registration/verification/verification_screen.dart';
@@ -26,7 +27,7 @@ class _VerifyPhoneState extends State<VerifyPhone> {
     _mainFocus.dispose();
     super.dispose();
   }
-  void _showVerificationSuccessModal(BuildContext context) {
+  /*void _showVerificationSuccessModal(BuildContext context) {
   showDialog(
     context: context,
     barrierDismissible: false,
@@ -47,7 +48,7 @@ class _VerifyPhoneState extends State<VerifyPhone> {
       );
     },
   );
-}
+}*/
 
   @override
   Widget build(BuildContext context) {
