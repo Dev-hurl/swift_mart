@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swift_mart/features/password%20recovery/reset_password.dart';
+import 'package:swift_mart/features/registration/profile/basic_profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ResetPassword(),
+      home: BasicProfile(),
     );
   }
 }
