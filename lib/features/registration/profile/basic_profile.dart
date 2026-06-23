@@ -254,6 +254,7 @@ class _BasicProfileState extends State<BasicProfile> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.blue,
                     foregroundColor: AppColors.bgWhite,
+                    elevation: 0,
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -261,7 +262,13 @@ class _BasicProfileState extends State<BasicProfile> {
                       MaterialPageRoute(builder: (context) => Address()),
                     );
                   },
-                  child: Text('Proceed to Address'),
+                  child: Text(
+                    'Proceed to Address',
+                    style: TextStyle(
+                      fontSize: AppFonts.body,
+                      fontWeight: AppFonts.semibold,
+                    ),
+                  ),
                 ),
               ),
             ],

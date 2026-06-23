@@ -100,7 +100,7 @@ class _AddressState extends State<Address> {
                     style: TextStyle(
                       fontSize: AppFonts.caption,
                       fontWeight: AppFonts.medium,
-                      color: AppColors.textPrimary
+                      color: AppColors.textPrimary,
                     ),
                     decoration: InputDecoration(
                       hintText: 'State/ Region',
@@ -177,6 +177,7 @@ class _AddressState extends State<Address> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.blue,
                     foregroundColor: AppColors.bgWhite,
+                    elevation: 0,
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -184,7 +185,13 @@ class _AddressState extends State<Address> {
                       MaterialPageRoute(builder: (context) => PaymentSetup()),
                     );
                   },
-                  child: Text('Proceed to Payment'),
+                  child: Text(
+                    'Proceed to Payment',
+                    style: TextStyle(
+                      fontSize: AppFonts.body,
+                      fontWeight: AppFonts.semibold,
+                    ),
+                  ),
                 ),
               ),
             ],
