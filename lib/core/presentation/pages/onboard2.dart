@@ -119,7 +119,7 @@ class Onboard2 extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        'Fresh Groceries Delivered',
+                        'Style for Every Season',
                         style: TextStyle(
                           fontSize: AppFonts.subheading,
                           fontWeight: AppFonts.semibold,
@@ -127,7 +127,7 @@ class Onboard2 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'Stock your kitchen with quality food and essentials, all from the comfort of your home.',
+                        'Shop the latest fashion trends and timeless pieces for your wardrobe.',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: AppFonts.body,

@@ -4,7 +4,12 @@ import 'package:swift_mart/core/presentation/pages/onboard4.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
 
 class Onboard3 extends StatelessWidget {
-  final List<String> images = [];
+  final List<String> images = [
+    'assets/images/washing machine.png',
+    'assets/images/cup.png',
+    'assets/images/toast bread.png',
+    'assets/images/grinder.png',
+  ];
   Onboard3({super.key});
 
   @override
@@ -114,7 +119,7 @@ class Onboard3 extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        'Fresh Groceries Delivered',
+                        'Smart Appliances for Modern Living',
                         style: TextStyle(
                           fontSize: AppFonts.subheading,
                           fontWeight: AppFonts.semibold,
@@ -122,7 +127,7 @@ class Onboard3 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'Stock your kitchen with quality food and essentials, all from the comfort of your home.',
+                        'Upgrade your home with reliable, high-quality appliances.',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: AppFonts.body,

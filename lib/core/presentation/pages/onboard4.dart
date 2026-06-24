@@ -4,7 +4,12 @@ import 'package:swift_mart/core/theme/app_colors.dart';
 import 'package:swift_mart/features/registration/sign_up.dart';
 
 class Onboard4 extends StatelessWidget {
-  final List<String> images = [];
+  final List<String> images = [
+    'assets/images/headphone.png',
+    'assets/images/phone stand.png',
+    'assets/images/airpod.png',
+    'assets/images/drone.png',
+  ];
   Onboard4({super.key});
 
   @override
@@ -114,7 +119,7 @@ class Onboard4 extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        'Fresh Groceries Delivered',
+                        'Tech that Keeps you Connected',
                         style: TextStyle(
                           fontSize: AppFonts.subheading,
                           fontWeight: AppFonts.semibold,
@@ -122,7 +127,7 @@ class Onboard4 extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'Stock your kitchen with quality food and essentials, all from the comfort of your home.',
+                        'Explore phones, gadgets and accessories to power your digital life.',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: AppFonts.body,
@@ -150,7 +155,7 @@ class Onboard4 extends StatelessWidget {
                         );
                       },
                       child: Text(
-                        'Next',
+                        'Get Started',
                         style: TextStyle(
                           fontSize: AppFonts.caption,
                           fontWeight: AppFonts.semibold,
