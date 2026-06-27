@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
+import 'package:swift_mart/core/presentation/widgets/custom_text_form_field.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
 import 'package:swift_mart/features/registration/profile/payment_setup.dart';
 
@@ -13,7 +14,6 @@ class Address extends StatefulWidget {
 
 class _AddressState extends State<Address> {
   final TextEditingController _stateController = TextEditingController();
-  final TextEditingController _apartmentController = TextEditingController();
   final TextEditingController _streetController = TextEditingController();
   final TextEditingController _postalCodeController = TextEditingController();
   String? _selectedCity;
@@ -21,7 +21,6 @@ class _AddressState extends State<Address> {
   @override
   void dispose() {
     _stateController.dispose();
-    _apartmentController.dispose();
     _streetController.dispose();
     _postalCodeController.dispose();
     super.dispose();
@@ -95,31 +94,9 @@ class _AddressState extends State<Address> {
                 spacing: 16,
                 children: [
                   //State
-                  TextField(
+                  CustomTextFormField(
                     controller: _stateController,
-                    style: TextStyle(
-                      fontSize: AppFonts.caption,
-                      fontWeight: AppFonts.medium,
-                      color: AppColors.textPrimary,
-                    ),
-                    decoration: InputDecoration(
-                      hintText: 'State/ Region',
-                      hintStyle: TextStyle(
-                        fontSize: AppFonts.caption,
-                        fontWeight: AppFonts.medium,
-                        color: AppColors.textSecondary,
-                      ),
-                      filled: true,
-                      fillColor: AppColors.bgGray,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(color: AppColors.bgGray),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(color: AppColors.blue),
-                      ),
-                    ),
+                    hinText: 'State/Region',
                   ),
                   // Drop down for City
                   DropdownButtonFormField(
@@ -131,7 +108,7 @@ class _AddressState extends State<Address> {
                       });
                     },
                     validator: (value) {
-                      if (value == null) return 'Select Gender';
+                      if (value == null) return 'Select City';
                       return null;
                     },
                     decoration: InputDecoration(
@@ -167,6 +144,15 @@ class _AddressState extends State<Address> {
                       ),
                     ),
                   ),
+                  CustomTextFormField(
+                    controller: _streetController,
+                    hinText: 'Street Address',
+                  ),
+                  CustomTextFormField(
+                    controller: _postalCodeController,
+                    hinText: 'Postal Code',
+                    keyboardType: TextInputType.number,
+                  ),
                 ],
               ),
               Spacer(),
@@ -189,7 +175,7 @@ class _AddressState extends State<Address> {
                     'Proceed to Payment',
                     style: TextStyle(
                       fontSize: AppFonts.body,
-                      fontWeight: AppFonts.semibold,
+                      fontWeight: AppFonts.medium,
                     ),
                   ),
                 ),

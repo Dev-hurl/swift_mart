@@ -266,7 +266,7 @@ class _BasicProfileState extends State<BasicProfile> {
                     'Proceed to Address',
                     style: TextStyle(
                       fontSize: AppFonts.body,
-                      fontWeight: AppFonts.semibold,
+                      fontWeight: AppFonts.medium,
                     ),
                   ),
                 ),

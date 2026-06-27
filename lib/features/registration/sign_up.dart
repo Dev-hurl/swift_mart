@@ -3,6 +3,8 @@ import 'package:swift_mart/core/constants/app_fonts.dart';
 import 'package:swift_mart/core/presentation/widgets/custom_text_form_field.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:swift_mart/features/registration/sign_in.dart';
+import 'package:swift_mart/features/registration/verification/verify_email.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -78,42 +80,6 @@ class _SignUpState extends State<SignUp> {
                                 controller: _emailController,
                                 hinText: 'e.g. Johndoe@gmailcom',
                               ),
-                              /*SizedBox(height: 12),
-                              //Password TextFF
-                              CustomTextFormField(
-                                prefixIcon: Icon(Icons.password_rounded),
-                                suffixIcon: Icon(Icons.visibility_off_rounded),
-                                obscureText: true,
-                                controller: _passwordController,
-                                hinText: 'e.g. Enter your Password',
-                              ),
-                              SizedBox(height: 24),
-                              Row(
-                                spacing: 4,
-                                children: [
-                                  Icon(
-                                    Icons.check_box_outline_blank_rounded,
-                                    color: AppColors.blue,
-                                  ),
-                                  Text(
-                                    'Remember me',
-                                    style: TextStyle(
-                                      fontSize: AppFonts.caption,
-                                      fontWeight: AppFonts.semibold,
-                                      color: AppColors.blue,
-                                    ),
-                                  ),
-                                  Spacer(),
-                                  Text(
-                                    'Forgot Password?',
-                                    style: TextStyle(
-                                      fontSize: AppFonts.caption,
-                                      fontWeight: AppFonts.semibold,
-                                      color: AppColors.error,
-                                    ),
-                                  ),
-                                ],
-                              ),*/
                               SizedBox(height: 32),
                               SizedBox(
                                 height: 48,
@@ -121,9 +87,18 @@ class _SignUpState extends State<SignUp> {
                                 child: FilledButton(
                                   style: FilledButton.styleFrom(
                                     backgroundColor: AppColors.blue,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadiusGeometry.circular(16),
+                                    ),
                                   ),
                                   onPressed: () {
-                                    //
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => VerifyEmail(),
+                                      ),
+                                    );
                                   },
                                   child: Text(
                                     'Sign Up',
@@ -144,6 +119,10 @@ class _SignUpState extends State<SignUp> {
                                     side: BorderSide(
                                       color: AppColors.blue,
                                       width: 2,
+                                    ),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadiusGeometry.circular(16),
                                     ),
                                   ),
                                   onPressed: () {
@@ -239,23 +218,33 @@ class _SignUpState extends State<SignUp> {
                               ),
                               SizedBox(height: 32),
 
-                              Text.rich(
-                                TextSpan(
-                                  text: 'Already have an Account?',
-                                  style: TextStyle(
-                                    color: AppColors.textPrimary,
-                                    fontSize: AppFonts.caption,
-                                    fontWeight: AppFonts.regular,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text: 'Sign In',
-                                      style: TextStyle(
-                                        color: AppColors.blue,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => SignIn(),
                                     ),
-                                  ],
+                                  );
+                                },
+                                child: Text.rich(
+                                  TextSpan(
+                                    text: 'Already have an Account?',
+                                    style: TextStyle(
+                                      color: AppColors.textPrimary,
+                                      fontSize: AppFonts.caption,
+                                      fontWeight: AppFonts.regular,
+                                    ),
+                                    children: [
+                                      TextSpan(
+                                        text: 'Sign In',
+                                        style: TextStyle(
+                                          color: AppColors.blue,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],

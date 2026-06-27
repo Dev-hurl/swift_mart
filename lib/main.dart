@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:swift_mart/features/registration/profile/basic_profile.dart';
+import 'package:swift_mart/core/presentation/pages/onboard1.dart';
+import 'package:swift_mart/features/home/home_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BasicProfile(),
+      home: HomePage(),
     );
   }
 }

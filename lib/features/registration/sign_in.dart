@@ -3,6 +3,8 @@ import 'package:swift_mart/core/constants/app_fonts.dart';
 import 'package:swift_mart/core/presentation/widgets/custom_text_form_field.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:swift_mart/features/home/home_page.dart';
+import 'package:swift_mart/features/registration/sign_up.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -161,7 +163,12 @@ class _SignInState extends State<SignIn> {
                                     ),
                                   ),
                                   onPressed: () {
-                                    //
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => HomePage(),
+                                      ),
+                                    );
                                   },
                                   child: Text(
                                     'Continue as Guest',
@@ -253,23 +260,33 @@ class _SignInState extends State<SignIn> {
                               ),
                               SizedBox(height: 32),
 
-                              Text.rich(
-                                TextSpan(
-                                  text: 'Don\'t have an Account?',
-                                  style: TextStyle(
-                                    color: AppColors.textPrimary,
-                                    fontSize: AppFonts.caption,
-                                    fontWeight: AppFonts.regular,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text: 'Sign Up',
-                                      style: TextStyle(
-                                        color: AppColors.blue,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => SignUp(),
                                     ),
-                                  ],
+                                  );
+                                },
+                                child: Text.rich(
+                                  TextSpan(
+                                    text: 'Don\'t have an Account?',
+                                    style: TextStyle(
+                                      color: AppColors.textPrimary,
+                                      fontSize: AppFonts.caption,
+                                      fontWeight: AppFonts.regular,
+                                    ),
+                                    children: [
+                                      TextSpan(
+                                        text: 'Sign Up',
+                                        style: TextStyle(
+                                          color: AppColors.blue,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],

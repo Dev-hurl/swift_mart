@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:swift_mart/core/constants/app_fonts.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
+import 'package:swift_mart/features/registration/profile/basic_profile.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({super.key});
@@ -15,7 +16,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /*appBar: AppBar(
         leading: Container(
           width: 48,
           height: 48,
@@ -27,7 +28,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
             },
           ),
         ),
-      ),
+      ),*/
       body: Padding(
         padding: EdgeInsetsGeometry.all(16),
         child: Center(
@@ -72,7 +73,10 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     backgroundColor: AppColors.blue,
                   ),
                   onPressed: () {
-                    //
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => BasicProfile()),
+                    );
                   },
                   child: Text(
                     'Verify Code',

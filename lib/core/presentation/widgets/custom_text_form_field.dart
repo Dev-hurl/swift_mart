@@ -33,7 +33,7 @@ class CustomTextFormField extends StatelessWidget {
       scrollPhysics: NeverScrollableScrollPhysics(),
       obscureText: obscureText,
       inputFormatters: inputFormatter,
-      style: TextStyle(fontSize: AppFonts.body, color: AppColors.textSecondary),
+      style: TextStyle(fontSize: AppFonts.body, color: AppColors.textPrimary),
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         prefixIconColor: AppColors.blue,
