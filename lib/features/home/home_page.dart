@@ -1,9 +1,5 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:hugeicons/styles/stroke_rounded.dart';
-import 'package:swift_mart/core/presentation/widgets/custom_search_bar.dart';
 import 'package:swift_mart/core/presentation/widgets/smart_search_bar.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
 

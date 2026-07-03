@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:swift_mart/core/presentation/pages/onboard1.dart';
 import 'package:swift_mart/features/home/home_page.dart';
 
 

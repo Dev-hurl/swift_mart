@@ -10,7 +10,7 @@ class SmartSearchBar extends StatefulWidget {
 }
 
 class _SmartSearchBarState extends State<SmartSearchBar> {
-  // Mock inventory database for Swift Mart
+  
   final List<String> _allProducts = [
     'iPhone 15 Pro',
     'MacBook Air M3',
@@ -133,9 +133,5 @@ class _SmartSearchBarState extends State<SmartSearchBar> {
         product,
       ); // Closes suggestion box and updates input value
     });
-
-    // TODO: Wire this to your presentation layer/bloc event
-    // e.g., context.read<SearchBloc>().add(ExecuteSearchEvent(query: product));
-    print('Navigating to product details or search results for: $product');
   }
 }

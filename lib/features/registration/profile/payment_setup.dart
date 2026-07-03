@@ -4,7 +4,6 @@ import 'package:swift_mart/core/constants/app_fonts.dart';
 import 'package:swift_mart/core/presentation/widgets/custom_text_form_field.dart';
 import 'package:swift_mart/core/theme/app_colors.dart';
 import 'package:swift_mart/features/home/home_page.dart';
-import 'package:swift_mart/features/registration/profile/address.dart';
 
 class PaymentSetup extends StatefulWidget {
   const PaymentSetup({super.key});
