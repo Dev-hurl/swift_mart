@@ -16,19 +16,6 @@ class _VerificationScreenState extends State<VerificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /*appBar: AppBar(
-        leading: Container(
-          width: 48,
-          height: 48,
-          color: AppColors.bgGray,
-          child: BackButton(
-            color: AppColors.textPrimary,
-            onPressed: () {
-              //
-            },
-          ),
-        ),
-      ),*/
       body: Padding(
         padding: EdgeInsetsGeometry.all(16),
         child: Center(

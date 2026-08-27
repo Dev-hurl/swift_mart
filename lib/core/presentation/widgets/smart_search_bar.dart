@@ -32,7 +32,7 @@ class _SmartSearchBarState extends State<SmartSearchBar> {
   @override
   Widget build(BuildContext context) {
     return SearchAnchor(
-      isFullScreen: true,
+      isFullScreen: false,
       searchController: _searchController,
       // The builder controls what the search bar looks like on your main screen
       builder: (BuildContext context, SearchController controller) {
